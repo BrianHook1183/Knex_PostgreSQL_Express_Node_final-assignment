@@ -1,7 +1,12 @@
 const knex = require("../db/connection");
+const table = "posts";
 
 function create(post) {
-  //your solution here
+  // my solution
+  return knex(table)
+    .insert(post)
+    .returning("*")
+    .then((createdPosts) => createdPosts[0]);
 }
 
 function read(postId) {

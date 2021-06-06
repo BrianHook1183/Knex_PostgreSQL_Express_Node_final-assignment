@@ -13,8 +13,8 @@ async function postExists(req, res, next) {
 }
 
 async function create(req, res) {
-  // your solution here
-  res.json({ data: "" });
+  // my solution
+  res.json({ data: await service.create(req.body.data) });
 }
 
 async function update(req, res) {
