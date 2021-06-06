@@ -18,8 +18,12 @@ async function create(req, res) {
 }
 
 async function update(req, res) {
-  // your solution here
-  res.json({ data: "" });
+  // my solution
+  const updatedPost = {
+    ...req.body.data,
+    post_id: req.params.postId,
+  };
+  service.update(updatedPost).then((data) => res.json({ data }));
 }
 
 async function destroy(req, res) {

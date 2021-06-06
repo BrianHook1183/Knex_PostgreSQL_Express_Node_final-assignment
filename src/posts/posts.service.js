@@ -10,11 +10,16 @@ function create(post) {
 }
 
 function read(postId) {
-  return knex("posts").select("*").where({ post_id: postId }).first();
+  return knex(table).select("*").where({ post_id: postId }).first();
 }
 
 function update(updatedPost) {
-  //your solution here
+  // my solution
+  return knex(table)
+    .select("*")
+    .where({ post_id: updatedPost.post_id })
+    .update(updatedPost, "*")
+    .then((updatedRecords) => updatedRecords[0]);
 }
 
 function destroy(postId) {
