@@ -23,7 +23,8 @@ function update(updatedPost) {
 }
 
 function destroy(postId) {
-  //your solution here
+  //my solution
+  return knex(table).select("*").where({ post_id: postId }).del();
 }
 
 module.exports = {

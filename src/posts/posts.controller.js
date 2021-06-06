@@ -23,12 +23,12 @@ async function update(req, res) {
     ...req.body.data,
     post_id: req.params.postId,
   };
-  service.update(updatedPost).then((data) => res.json({ data }));
+  await service.update(updatedPost).then((data) => res.json({ data }));
 }
 
 async function destroy(req, res) {
-  // your solution here
-  res.json({ data: "" });
+  // my solution
+  await service.delete(res.locals.post.post_id).then(() => res.sendStatus(204));
 }
 
 module.exports = {
