@@ -7,7 +7,13 @@ function list() {
 }
 
 function listCommenterCount() {
-  // your solution here
+  // my solution
+  return knex("comments as c")
+    .join("users as u", "c.commenter_id", "u.user_id")
+    .count("c.comment_id")
+    .select("u.user_email as commenter_email")
+    .groupBy("commenter_email")
+    .orderBy("commenter_email");
 }
 
 function read(commentId) {
