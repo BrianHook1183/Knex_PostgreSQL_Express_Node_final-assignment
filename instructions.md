@@ -6,18 +6,16 @@ This is the capstone assignment for the Knex module.
 
 You are a backend developer at a blogging platform called "Blogful", and you've been tasked to create an API that returns data about the users, comments, and posts stored in their database. Their backend technology stack is currently Node.js/Express, PostgreSQL, and Knex. You are given the following ERD:
 
-> # !!! add in ERD once uploaded
-
-![blogful ERD](https://github.com/BrianHook1183/Joins_with_Knex/blob/main/blogful_erd.png)
+![blogful ERD](https://github.com/BrianHook1183/Knex_PostgreSQL_Express_Node_final-assignment/blob/3ff931ac50d02687444107d159eefb2a1570cbb1/blogful_erd.png)
 
 To complete this assignment, you will need to complete the tasks described below to get the tests to pass.
 
 Existing files
-In this checkpoint, all the required server routes have already set up for you, so you won't have to edit any of the *.router.js files. Take some time to understand the content of the existing files.
+In this checkpoint, all the required server routes have already set up for you, so you won't have to edit any of the \*.router.js files. Take some time to understand the content of the existing files.
 
 Do not directly change any of the seed files, as the tests rely on the specific test data set to work properly.
 
-You will then have to write Knex queries to complete the functions defined inside the *.service.js and *.controller.js files.
+You will then have to write Knex queries to complete the functions defined inside the _.service.js and _.controller.js files.
 
 Tasks
 In src/comments/comments.service.js, complete the list() function to create a Knex query that retrieves all comments from the comments table, selecting all columns.
